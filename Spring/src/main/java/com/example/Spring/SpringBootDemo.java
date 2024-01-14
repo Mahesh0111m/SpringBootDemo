@@ -9,7 +9,11 @@ public class SpringBootDemo {
 	public static void main(String[] args)
 	{
 		SpringApplication.run(SpringBootDemo.class, args);
-		System.out.println("Hello World");
+
+		//normal way of creating object
+		example obj= new example();
+		obj.code();
+
 	}
 
 }

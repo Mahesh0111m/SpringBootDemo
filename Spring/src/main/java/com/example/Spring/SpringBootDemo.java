@@ -1,5 +1,8 @@
 package com.example.Spring;
 
+import com.example.Spring.ServerExample.Demo;
+import com.example.Spring.ServiceExample.ServiceDemo;
+//import jdk.internal.icu.text.UnicodeSet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -28,8 +31,15 @@ public class SpringBootDemo {
 		//because using application context it creates bean
 
 		ApplicationContext context = SpringApplication.run(SpringBootDemo.class, args);
-			example obj= context.getBean(example.class);
-			obj.code();
+//			example obj= context.getBean(example.class);
+//			obj.code();
+
+		ServiceDemo service = context.getBean(ServiceDemo.class);
+
+		Demo obj = context.getBean(Demo.class);
+
+		service.process(obj);
+
 
 
 	}

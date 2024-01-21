@@ -3,11 +3,11 @@ package com.example.Spring;
 import org.springframework.stereotype.Component;
 
 @Component
-public class laptop
+public class laptop implements Computer
 {
     public void compile()
     {
 
-        System.out.println("compiling");
+        System.out.println("compiling in Laptop");
     }
 }
